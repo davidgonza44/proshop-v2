@@ -1,0 +1,41 @@
+{
+  "name": "proshop-v2",
+  "version": "2.0.0",
+  "description": "ecommerce application built with the MERN Stack",
+  "homepage": "https://github.com/davidgonza44/proshop-v2#readme",
+  "bugs": {
+    "url": "https://github.com/davidgonza44/proshop-v2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidgonza44/proshop-v2.git"
+  },
+  "license": "MIT",
+  "author": "David",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": " node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client \" ",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.0",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.1",
+    "multer": "^1.4.5-lts.1",
+    "react-toastify": "^11.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "dotenv": "^16.4.7",
+    "nodemon": "^3.1.9"
+  }
+}
